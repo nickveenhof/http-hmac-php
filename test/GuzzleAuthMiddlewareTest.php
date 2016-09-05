@@ -1,12 +1,12 @@
 <?php
 
-namespace Acquia\Hmac\Test;
+namespace NickVeenhof\Hmac\Test;
 
-use Acquia\Hmac\AuthorizationHeaderBuilder;
-use Acquia\Hmac\Exception\MalformedResponseException;
-use Acquia\Hmac\Guzzle\HmacAuthMiddleware;
-use Acquia\Hmac\Key;
-use Acquia\Hmac\Test\Mocks\MockHmacAuthMiddleware;
+use NickVeenhof\Hmac\AuthorizationHeaderBuilder;
+use NickVeenhof\Hmac\Exception\MalformedResponseException;
+use NickVeenhof\Hmac\Guzzle\HmacAuthMiddleware;
+use NickVeenhof\Hmac\Key;
+use NickVeenhof\Hmac\Test\Mocks\MockHmacAuthMiddleware;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
@@ -20,7 +20,7 @@ use GuzzleHttp\Psr7\Response;
 class GuzzleAuthMiddlewareTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var \Acquia\Hmac\KeyInterface
+     * @var \NickVeenhof\Hmac\KeyInterface
      *   A sample key.
      */
     protected $authKey;
@@ -97,7 +97,7 @@ class GuzzleAuthMiddlewareTest extends \PHPUnit_Framework_TestCase
     /**
      * Ensures the middleware throws an exception if the response is missing the right header.
      *
-     * @expectedException \Acquia\Hmac\Exception\MalformedResponseException
+     * @expectedException \NickVeenhof\Hmac\Exception\MalformedResponseException
      * @expectedExceptionMessage Response is missing required X-Server-Authorization-HMAC-SHA256 header.
      */
     public function testMissingRequiredResponseHeader()
@@ -124,7 +124,7 @@ class GuzzleAuthMiddlewareTest extends \PHPUnit_Framework_TestCase
     public function testInauthenticResponse()
     {
         $this->setExpectedException(
-            '\Acquia\Hmac\Exception\MalformedResponseException',
+            '\NickVeenhof\Hmac\Exception\MalformedResponseException',
             'Could not verify the authenticity of the response.'
         );
 

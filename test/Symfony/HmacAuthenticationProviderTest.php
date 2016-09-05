@@ -1,12 +1,12 @@
 <?php
 
-namespace Acquia\Hmac\Test\Symfony;
+namespace NickVeenhof\Hmac\Test\Symfony;
 
-use Acquia\Hmac\Key;
-use Acquia\Hmac\KeyInterface;
-use Acquia\Hmac\RequestAuthenticatorInterface;
-use Acquia\Hmac\Symfony\HmacAuthenticationProvider;
-use Acquia\Hmac\Symfony\HmacToken;
+use NickVeenhof\Hmac\Key;
+use NickVeenhof\Hmac\KeyInterface;
+use NickVeenhof\Hmac\RequestAuthenticatorInterface;
+use NickVeenhof\Hmac\Symfony\HmacAuthenticationProvider;
+use NickVeenhof\Hmac\Symfony\HmacToken;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Authentication\Token\AnonymousToken;
 

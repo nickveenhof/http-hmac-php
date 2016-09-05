@@ -1,13 +1,13 @@
 <?php
 
-namespace Acquia\Hmac\Test;
+namespace NickVeenhof\Hmac\Test;
 
-use Acquia\Hmac\AuthorizationHeader;
-use Acquia\Hmac\Exception\MalformedRequestException;
-use Acquia\Hmac\KeyInterface;
-use Acquia\Hmac\RequestAuthenticator;
-use Acquia\Hmac\Test\Mocks\MockKeyLoader;
-use Acquia\Hmac\Test\Mocks\MockRequestAuthenticator;
+use NickVeenhof\Hmac\AuthorizationHeader;
+use NickVeenhof\Hmac\Exception\MalformedRequestException;
+use NickVeenhof\Hmac\KeyInterface;
+use NickVeenhof\Hmac\RequestAuthenticator;
+use NickVeenhof\Hmac\Test\Mocks\MockKeyLoader;
+use NickVeenhof\Hmac\Test\Mocks\MockRequestAuthenticator;
 use GuzzleHttp\Psr7\Request;
 
 class RequestAuthenticatorTest extends \PHPUnit_Framework_TestCase
@@ -72,7 +72,7 @@ class RequestAuthenticatorTest extends \PHPUnit_Framework_TestCase
     /**
      * Ensures an exception is thrown if the signature is invalid.
      *
-     * @expectedException \Acquia\Hmac\Exception\InvalidSignatureException
+     * @expectedException \NickVeenhof\Hmac\Exception\InvalidSignatureException
      */
     public function testInvalidSignature()
     {
@@ -113,7 +113,7 @@ class RequestAuthenticatorTest extends \PHPUnit_Framework_TestCase
     /**
      * Ensures an exception is thrown if the request has expired.
      *
-     * @expectedException \Acquia\Hmac\Exception\TimestampOutOfRangeException
+     * @expectedException \NickVeenhof\Hmac\Exception\TimestampOutOfRangeException
      */
     public function testExpiredRequest()
     {
@@ -142,7 +142,7 @@ class RequestAuthenticatorTest extends \PHPUnit_Framework_TestCase
     /**
      * Ensures an exception is thrown if the request is from the far future.
      *
-     * @expectedException \Acquia\Hmac\Exception\TimestampOutOfRangeException
+     * @expectedException \NickVeenhof\Hmac\Exception\TimestampOutOfRangeException
      */
     public function testFutureRequest()
     {
@@ -171,7 +171,7 @@ class RequestAuthenticatorTest extends \PHPUnit_Framework_TestCase
     /**
      * Ensures an exception is thrown if the key cannot be found in the loader.
      *
-     * @expectedException \Acquia\Hmac\Exception\KeyNotFoundException
+     * @expectedException \NickVeenhof\Hmac\Exception\KeyNotFoundException
      */
     public function testKeyNotFound()
     {
@@ -194,7 +194,7 @@ class RequestAuthenticatorTest extends \PHPUnit_Framework_TestCase
     /**
      * Ensures an exception is thrown if the request is missing the X-Authorization-Timestamp header.
      *
-     * @expectedException \Acquia\Hmac\Exception\MalformedRequestException
+     * @expectedException \NickVeenhof\Hmac\Exception\MalformedRequestException
      * @expectedExceptionMessage Request is missing X-Authorization-Timestamp.
      */
     public function testMissingAuthenticationTimestampHeader()

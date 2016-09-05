@@ -1,9 +1,9 @@
 <?php
 
-namespace Acquia\Hmac\Test\Mocks;
+namespace NickVeenhof\Hmac\Test\Mocks;
 
-use Acquia\Hmac\Key;
-use Acquia\Hmac\KeyLoaderInterface;
+use NickVeenhof\Hmac\Key;
+use NickVeenhof\Hmac\KeyLoaderInterface;
 
 class MockKeyLoader implements KeyLoaderInterface
 {

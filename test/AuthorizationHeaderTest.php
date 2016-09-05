@@ -1,11 +1,11 @@
 <?php
 
-namespace Acquia\Hmac\Test;
+namespace NickVeenhof\Hmac\Test;
 
-use Acquia\Hmac\AuthorizationHeader;
-use Acquia\Hmac\AuthorizationHeaderBuilder;
-use Acquia\Hmac\Exception\MalformedRequestException;
-use Acquia\Hmac\Key;
+use NickVeenhof\Hmac\AuthorizationHeader;
+use NickVeenhof\Hmac\AuthorizationHeaderBuilder;
+use NickVeenhof\Hmac\Exception\MalformedRequestException;
+use NickVeenhof\Hmac\Key;
 use GuzzleHttp\Psr7\Request;
 
 /**
@@ -113,7 +113,7 @@ class AuthorizationHeaderTest extends \PHPUnit_Framework_TestCase
     /**
      * Ensures an exception is thrown if a request does not have an Authorization header.
      *
-     * @expectedException \Acquia\Hmac\Exception\MalformedRequestException
+     * @expectedException \NickVeenhof\Hmac\Exception\MalformedRequestException
      * @expectedExceptionMessage Authorization header is required.
      */
     public function testCreateFromRequestNoAuthorizationHeader()
@@ -136,7 +136,7 @@ class AuthorizationHeaderTest extends \PHPUnit_Framework_TestCase
      *
      * @dataProvider requiredFieldsProvider
      *
-     * @expectedException \Acquia\Hmac\Exception\MalformedRequestException
+     * @expectedException \NickVeenhof\Hmac\Exception\MalformedRequestException
      * @expectedExceptionMessage Authorization header requires a realm, id, version, nonce and a signature.
      */
     public function testParseAuthorizationHeaderRequiredFields($field)
@@ -171,7 +171,7 @@ class AuthorizationHeaderTest extends \PHPUnit_Framework_TestCase
     /**
      * Ensures an exception is thrown when a required field is missing.
      *
-     * @expectedException \Acquia\Hmac\Exception\MalformedRequestException
+     * @expectedException \NickVeenhof\Hmac\Exception\MalformedRequestException
      * @expectedExceptionMessage One or more required authorization header fields (ID, nonce, realm, version) are missing.
      */
     public function testAuthorizationHeaderBuilderRequiresFields()
@@ -197,7 +197,7 @@ class AuthorizationHeaderTest extends \PHPUnit_Framework_TestCase
     /**
      * Ensures an exception is thrown when the required X-Authorization-Timestamp field is missing.
      *
-     * @expectedException \Acquia\Hmac\Exception\MalformedRequestException
+     * @expectedException \NickVeenhof\Hmac\Exception\MalformedRequestException
      * @expectedExceptionMessage X-Authorization-Timestamp header missing from request.
      */
     public function testAuthorizationHeaderBuilderRequiresTimestamp()

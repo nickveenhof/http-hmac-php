@@ -1,6 +1,6 @@
 <?php
 
-namespace Acquia\Hmac;
+namespace NickVeenhof\Hmac;
 
 use Psr\Http\Message\RequestInterface;
 
@@ -11,14 +11,14 @@ interface RequestAuthenticatorInterface
      *
      * @param \Psr\Http\Message\RequestInterface $request
      *
-     * @throws \Acquia\Hmac\Exception\InvalidSignatureException
+     * @throws \NickVeenhof\Hmac\Exception\InvalidSignatureException
      *   When the signature in the request does not match what's calculated.
-     * @throws \Acquia\Hmac\Exception\TimestampOutOfRangeException
+     * @throws \NickVeenhof\Hmac\Exception\TimestampOutOfRangeException
      *   When the request timestamp is out of range of the server time.
-     * @throws \Acquia\Hmac\Exception\KeyNotFoundException
+     * @throws \NickVeenhof\Hmac\Exception\KeyNotFoundException
      *   When the key loader cannot find the key for the request ID.
      *
-     * @return \Acquia\Hmac\KeyInterface
+     * @return \NickVeenhof\Hmac\KeyInterface
      *   The key associated with the ID specified in the request.
      */
     public function authenticate(RequestInterface $request);

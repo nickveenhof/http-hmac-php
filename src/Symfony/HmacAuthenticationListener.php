@@ -1,6 +1,6 @@
 <?php
 
-namespace Acquia\Hmac\Symfony;
+namespace NickVeenhof\Hmac\Symfony;
 
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Acquia\Hmac\Exception;
+namespace NickVeenhof\Hmac\Exception;
 
 /**
  * Catch-all exception for a request that cannot be authenticated.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Acquia\Hmac;
+namespace NickVeenhof\Hmac;
 
 use Psr\Http\Message\RequestInterface;
 
@@ -39,7 +39,7 @@ interface RequestSignerInterface
     /**
      * Adds a hashed a hash for the request body.
      *
-     * @param \Acquia\Hmac\KeyInterface $key
+     * @param \NickVeenhof\Hmac\KeyInterface $key
      *   The request for which to generate the hashed Body.
      *
      * @return \Psr\Http\Message\RequestInterface $request

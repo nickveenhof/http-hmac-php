@@ -1,8 +1,8 @@
 <?php
 
-namespace Acquia\Hmac;
+namespace NickVeenhof\Hmac;
 
-use Acquia\Hmac\Exception\MalformedResponseException;
+use NickVeenhof\Hmac\Exception\MalformedResponseException;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -18,7 +18,7 @@ class ResponseAuthenticator
     protected $request;
 
     /**
-     * @param \Acquia\Hmac\KeyInterface $key
+     * @param \NickVeenhof\Hmac\KeyInterface $key
      *   The key with which the request was signed.
      */
     protected $key;
@@ -28,7 +28,7 @@ class ResponseAuthenticator
      *
      * @param \Psr\Http\Message\RequestInterface $request
      *   The signed request.
-     * @param \Acquia\Hmac\KeyInterface $key
+     * @param \NickVeenhof\Hmac\KeyInterface $key
      *   The key with which the request was signed.
      */
     public function __construct(RequestInterface $request, KeyInterface $key)

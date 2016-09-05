@@ -34,8 +34,8 @@ for more detailed installation and usage instructions.
 
 ```php
 
-use Acquia\Hmac\Guzzle\HmacAuthMiddleware;
-use Acquia\Hmac\Key;
+use NickVeenhof\Hmac\Guzzle\HmacAuthMiddleware;
+use NickVeenhof\Hmac\Key;
 use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 
@@ -70,10 +70,10 @@ var_dump($result);
 ### Authenticate the request using PSR-7-compatible requests
 
 ```php
-use Acquia\Hmac\RequestAuthenticator;
-use Acquia\Hmac\ResponseSigner;
+use NickVeenhof\Hmac\RequestAuthenticator;
+use NickVeenhof\Hmac\ResponseSigner;
 
-// $keyLoader implements \Acquia\Hmac\KeyLoaderInterface
+// $keyLoader implements \NickVeenhof\Hmac\KeyLoaderInterface
 $authenticator = new RequestAuthenticator($keyLoader);
 
 // $request implements PSR-7's \Psr\Http\Message\RequestInterface
@@ -101,13 +101,13 @@ In order to use the provided Silex security provider, you will need to include t
 Sample implementation:
 
 ```php
-use Acquia\Hmac\HmacSecurityProvider;
+use NickVeenhof\Hmac\HmacSecurityProvider;
 use Silex\Application;
 use Silex\Provider\SecurityServiceProvider;
 
 $app = new Application();
 
-// $keyLoader implements \Acquia\Hmac\KeyLoaderInterface
+// $keyLoader implements \NickVeenhof\Hmac\KeyLoaderInterface
 $app->register(new SecurityServiceProvider());
 $app->register(new HmacSecurityProvider($keyLoader));
 
@@ -141,13 +141,13 @@ Sammple implementation:
 # app/config/services.yml
 services:
     hmac.security.authentication.provider:
-        class: Acquia\Hmac\Symfony\HmacAuthenticationProvider
+        class: NickVeenhof\Hmac\Symfony\HmacAuthenticationProvider
         arguments:
-            - '@hmac.request.authenticator' # Service should implement \Acquia\Hmac\RequstAuthenticatorInterface
+            - '@hmac.request.authenticator' # Service should implement \NickVeenhof\Hmac\RequstAuthenticatorInterface
         public: false
 
     hmac.security.authentication.listener:
-        class: Acquia\Hmac\Symfony\HmacAuthenticationListener
+        class: NickVeenhof\Hmac\Symfony\HmacAuthenticationListener
         arguments: ['@security.token_storage', '@security.authentication.manager']
         public: false
 

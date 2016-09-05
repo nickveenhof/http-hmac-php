@@ -1,6 +1,6 @@
 <?php
 
-namespace Acquia\Hmac;
+namespace NickVeenhof\Hmac;
 
 /**
  * A key for authenticating and signing requests.

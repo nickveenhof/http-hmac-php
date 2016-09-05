@@ -1,9 +1,9 @@
 <?php
 
-namespace Acquia\Hmac\Test\Symfony;
+namespace NickVeenhof\Hmac\Test\Symfony;
 
-use Acquia\Hmac\Key;
-use Acquia\Hmac\Symfony\HmacResponseListener;
+use NickVeenhof\Hmac\Key;
+use NickVeenhof\Hmac\Symfony\HmacResponseListener;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Acquia\Hmac\Symfony;
+namespace NickVeenhof\Hmac\Symfony;
 
-use Acquia\Hmac\RequestAuthenticatorInterface;
+use NickVeenhof\Hmac\RequestAuthenticatorInterface;
 use Symfony\Bridge\PsrHttpMessage\Factory\DiactorosFactory;
 use Symfony\Component\Security\Core\Authentication\Provider\AuthenticationProviderInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
@@ -14,7 +14,7 @@ use Symfony\Component\Security\Core\Exception\AuthenticationException;
 class HmacAuthenticationProvider implements AuthenticationProviderInterface
 {
     /**
-     * @var \Acquia\Hmac\RequestAuthenticatorInterface
+     * @var \NickVeenhof\Hmac\RequestAuthenticatorInterface
      *   A HMAC request authenticator service.
      */
     protected $authenticator;
@@ -22,7 +22,7 @@ class HmacAuthenticationProvider implements AuthenticationProviderInterface
     /**
      * Initializes the authentication provider.
      *
-     * @param \Acquia\Hmac\RequestAuthenticatorInterface $authenticator
+     * @param \NickVeenhof\Hmac\RequestAuthenticatorInterface $authenticator
      *   The HMAC request authenticator service.
      */
     public function __construct(RequestAuthenticatorInterface $authenticator)

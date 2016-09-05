@@ -1,15 +1,15 @@
 <?php
 
-namespace Acquia\Hmac\Symfony;
+namespace NickVeenhof\Hmac\Symfony;
 
-use Acquia\Hmac\KeyLoaderInterface;
-use Acquia\Hmac\RequestAuthenticator;
-use Acquia\Hmac\Symfony\HmacAuthenticationEntryPoint;
-use Acquia\Hmac\Symfony\HmacAuthenticationListener;
-use Acquia\Hmac\Symfony\HmacAuthenticationProvider;
+use NickVeenhof\Hmac\KeyLoaderInterface;
+use NickVeenhof\Hmac\RequestAuthenticator;
+use NickVeenhof\Hmac\Symfony\HmacAuthenticationEntryPoint;
+use NickVeenhof\Hmac\Symfony\HmacAuthenticationListener;
+use NickVeenhof\Hmac\Symfony\HmacAuthenticationProvider;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
-use Acquia\Hmac\Symfony\HmacResponseListener;
+use NickVeenhof\Hmac\Symfony\HmacResponseListener;
 
 /**
  * A Silex service provider to provide Acquia HTTP Hmac as a firewall option.
@@ -17,7 +17,7 @@ use Acquia\Hmac\Symfony\HmacResponseListener;
 class HmacSecurityProvider implements ServiceProviderInterface
 {
     /**
-     * @var \Acquia\Hmac\KeyLoaderInterface
+     * @var \NickVeenhof\Hmac\KeyLoaderInterface
      *   An HMAC key loader.
      */
     protected $keyLoader;
@@ -25,7 +25,7 @@ class HmacSecurityProvider implements ServiceProviderInterface
     /**
      * Initializes the security provider.
      *
-     * @param \Acquia\Hmac\KeyLoaderInterface $keyLoader
+     * @param \NickVeenhof\Hmac\KeyLoaderInterface $keyLoader
      *   An HMAC key loader.
      */
     public function __construct(KeyLoaderInterface $keyLoader)

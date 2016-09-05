@@ -1,12 +1,12 @@
 <?php
 
-namespace Acquia\Hmac\Test\Mocks;
+namespace NickVeenhof\Hmac\Test\Mocks;
 
-use Acquia\Hmac\AuthorizationHeaderInterface;
-use Acquia\Hmac\Digest\Digest;
-use Acquia\Hmac\KeyInterface;
-use Acquia\Hmac\KeyLoaderInterface;
-use Acquia\Hmac\RequestAuthenticator;
+use NickVeenhof\Hmac\AuthorizationHeaderInterface;
+use NickVeenhof\Hmac\Digest\Digest;
+use NickVeenhof\Hmac\KeyInterface;
+use NickVeenhof\Hmac\KeyLoaderInterface;
+use NickVeenhof\Hmac\RequestAuthenticator;
 
 /**
  * Allows the authentication of requests with a custom authorization header.
@@ -14,7 +14,7 @@ use Acquia\Hmac\RequestAuthenticator;
 class MockRequestAuthenticator extends RequestAuthenticator
 {
     /**
-     * @var \Acquia\Hmac\AuthorizationHeaderInterface
+     * @var \NickVeenhof\Hmac\AuthorizationHeaderInterface
      *  A custom authorization header.
      */
     protected $authHeader;
@@ -28,9 +28,9 @@ class MockRequestAuthenticator extends RequestAuthenticator
     /**
      * Initializes the authenticator with a key loader, auth header, and comparison timestamp.
      *
-     * @param \Acquia\Hmac\KeyLoaderInterface $keyLoader
+     * @param \NickVeenhof\Hmac\KeyLoaderInterface $keyLoader
      *   A datastore used to locate secrets for corresponding IDs.
-     * @param \Acquia\Hmac\AuthorizationHeaderInterface $authHeader
+     * @param \NickVeenhof\Hmac\AuthorizationHeaderInterface $authHeader
      *   An optional custom authorization header.
      * @param int $timestamp
      *   An optional custom timestamp by which to compare requests.

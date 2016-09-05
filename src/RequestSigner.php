@@ -1,9 +1,9 @@
 <?php
 
-namespace Acquia\Hmac;
+namespace NickVeenhof\Hmac;
 
-use Acquia\Hmac\Digest\Digest;
-use Acquia\Hmac\Digest\DigestInterface;
+use NickVeenhof\Hmac\Digest\Digest;
+use NickVeenhof\Hmac\Digest\DigestInterface;
 use Psr\Http\Message\RequestInterface;
 
 /**
@@ -12,7 +12,7 @@ use Psr\Http\Message\RequestInterface;
 class RequestSigner implements RequestSignerInterface
 {
     /**
-     * @var \Acquia\Hmac\KeyInterface
+     * @var \NickVeenhof\Hmac\KeyInterface
      *   The key to sign requests with.
      */
     protected $key;
@@ -24,7 +24,7 @@ class RequestSigner implements RequestSignerInterface
     protected $realm;
 
     /**
-     * @var \Acquia\Hmac\Digest\DigestInterface
+     * @var \NickVeenhof\Hmac\Digest\DigestInterface
      *   The message digest to use when signing requests.
      */
     protected $digest;
@@ -32,13 +32,13 @@ class RequestSigner implements RequestSignerInterface
     /**
      * Initializes the request signer with a key and realm.
      *
-     * @param \Acquia\Hmac\KeyInterface $key
+     * @param \NickVeenhof\Hmac\KeyInterface $key
      *   The key to sign requests with.
      * @param string $realm
      *   The API realm/provider. Defaults to "Acquia".
-     * @param \Acquia\Hmac\Digest\DigestInterface $digest
+     * @param \NickVeenhof\Hmac\Digest\DigestInterface $digest
      *   The message digest to use when signing requests. Defaults to
-     *   \Acquia\Hmac\Digest\Digest.
+     *   \NickVeenhof\Hmac\Digest\Digest.
      */
     public function __construct(KeyInterface $key, $realm = 'Acquia', DigestInterface $digest = null)
     {
@@ -121,7 +121,7 @@ class RequestSigner implements RequestSignerInterface
      *   A list of custom header names. The values of the headers will be
      *   extracted from the request.
      *
-     * @return \Acquia\Hmac\AuthorizationHeader
+     * @return \NickVeenhof\Hmac\AuthorizationHeader
      *   The compiled authorizatio header object.
      */
     protected function buildAuthorizationHeader(RequestInterface $request, array $customHeaders = [])

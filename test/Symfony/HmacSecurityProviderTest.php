@@ -1,13 +1,13 @@
 <?php
 
-namespace Acquia\Hmac\Test\Symfony;
+namespace NickVeenhof\Hmac\Test\Symfony;
 
-use Acquia\Hmac\KeyLoaderInterface;
-use Acquia\Hmac\Symfony\HmacAuthenticationEntryPoint;
-use Acquia\Hmac\Symfony\HmacAuthenticationListener;
-use Acquia\Hmac\Symfony\HmacAuthenticationProvider;
-use Acquia\Hmac\Symfony\HmacResponseListener;
-use Acquia\Hmac\Symfony\HmacSecurityProvider;
+use NickVeenhof\Hmac\KeyLoaderInterface;
+use NickVeenhof\Hmac\Symfony\HmacAuthenticationEntryPoint;
+use NickVeenhof\Hmac\Symfony\HmacAuthenticationListener;
+use NickVeenhof\Hmac\Symfony\HmacAuthenticationProvider;
+use NickVeenhof\Hmac\Symfony\HmacResponseListener;
+use NickVeenhof\Hmac\Symfony\HmacSecurityProvider;
 use Silex\Application;
 use Silex\Provider\SecurityServiceProvider;
 use Symfony\Component\HttpKernel\KernelEvents;

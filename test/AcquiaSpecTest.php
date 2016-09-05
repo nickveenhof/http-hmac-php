@@ -1,16 +1,16 @@
 <?php
 
-namespace Acquia\Hmac\Test;
+namespace NickVeenhof\Hmac\Test;
 
-use Acquia\Hmac\AuthorizationHeaderBuilder;
-use Acquia\Hmac\Digest\Digest;
-use Acquia\Hmac\Key;
-use Acquia\Hmac\RequestAuthenticator;
-use Acquia\Hmac\RequestSigner;
-use Acquia\Hmac\ResponseSigner;
-use Acquia\Hmac\Test\Mocks\MockKeyLoader;
-use Acquia\Hmac\Test\Mocks\MockRequestAuthenticator;
-use Acquia\Hmac\Test\Mocks\MockRequestSigner;
+use NickVeenhof\Hmac\AuthorizationHeaderBuilder;
+use NickVeenhof\Hmac\Digest\Digest;
+use NickVeenhof\Hmac\Key;
+use NickVeenhof\Hmac\RequestAuthenticator;
+use NickVeenhof\Hmac\RequestSigner;
+use NickVeenhof\Hmac\ResponseSigner;
+use NickVeenhof\Hmac\Test\Mocks\MockKeyLoader;
+use NickVeenhof\Hmac\Test\Mocks\MockRequestAuthenticator;
+use NickVeenhof\Hmac\Test\Mocks\MockRequestSigner;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 

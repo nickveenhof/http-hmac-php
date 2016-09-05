@@ -1,11 +1,11 @@
 <?php
 
-namespace Acquia\Hmac\Guzzle;
+namespace NickVeenhof\Hmac\Guzzle;
 
-use Acquia\Hmac\Exception\MalformedResponseException;
-use Acquia\Hmac\KeyInterface;
-use Acquia\Hmac\RequestSigner;
-use Acquia\Hmac\ResponseAuthenticator;
+use NickVeenhof\Hmac\Exception\MalformedResponseException;
+use NickVeenhof\Hmac\KeyInterface;
+use NickVeenhof\Hmac\RequestSigner;
+use NickVeenhof\Hmac\ResponseAuthenticator;
 use Guzzle\Http\Exception\BadResponseException;
 use GuzzleHttp\Exception\RequestException;
 use Psr\Http\Message\RequestInterface;
@@ -14,13 +14,13 @@ use Psr\Http\Message\ResponseInterface;
 class HmacAuthMiddleware
 {
     /**
-     * @var \Acquia\Hmac\KeyInterface
+     * @var \NickVeenhof\Hmac\KeyInterface
      *  The key with which to sign requests and responses.
      */
     protected $key;
 
     /**
-     * @var \Acquia\Hmac\RequestSignerInterface
+     * @var \NickVeenhof\Hmac\RequestSignerInterface
      */
     protected $requestSigner;
 
@@ -30,7 +30,7 @@ class HmacAuthMiddleware
     protected $customHeaders = [];
 
     /**
-     * @param \Acquia\Hmac\KeyInterface $key
+     * @param \NickVeenhof\Hmac\KeyInterface $key
      * @param string $realm
      * @param array $customHeaders
      */

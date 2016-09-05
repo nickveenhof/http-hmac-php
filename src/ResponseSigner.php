@@ -1,9 +1,9 @@
 <?php
 
-namespace Acquia\Hmac;
+namespace NickVeenhof\Hmac;
 
-use Acquia\Hmac\Digest\Digest;
-use Acquia\Hmac\Digest\DigestInterface;
+use NickVeenhof\Hmac\Digest\Digest;
+use NickVeenhof\Hmac\Digest\DigestInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -13,7 +13,7 @@ use Psr\Http\Message\ResponseInterface;
 class ResponseSigner
 {
     /**
-     * @var \Acquia\Hmac\KeyInterface
+     * @var \NickVeenhof\Hmac\KeyInterface
      *   The key with which to sign the response.
      */
     protected $key;
@@ -25,20 +25,20 @@ class ResponseSigner
     protected $request;
 
     /**
-     * @var \Acquia\Hmac\Digest\DigestInterface
+     * @var \NickVeenhof\Hmac\Digest\DigestInterface
      *   The digest with which to sign the response.
      */
     protected $digest;
     /**
      * Initializes the response signer with a key and request.
      *
-     * @param \Acquia\Hmac\KeyInterface $key
+     * @param \NickVeenhof\Hmac\KeyInterface $key
      *   The key with which to sign the response.
      * @param \Psr\Http\Message\RequestInterface $request
      *   The original response corresponding to the response being signed.
-     * @param \Acquia\Hmac\Digest\Digest $digest
+     * @param \NickVeenhof\Hmac\Digest\Digest $digest
      *   The digest with which to sign the response. Defaults to
-     *   \Acquia\Hmac\Digest\Digest.
+     *   \NickVeenhof\Hmac\Digest\Digest.
      */
     public function __construct(KeyInterface $key, RequestInterface $request, DigestInterface $digest = null)
     {

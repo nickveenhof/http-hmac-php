@@ -1,8 +1,8 @@
 <?php
 
-namespace Acquia\Hmac\Symfony;
+namespace NickVeenhof\Hmac\Symfony;
 
-use Acquia\Hmac\KeyInterface;
+use NickVeenhof\Hmac\KeyInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Authentication\Token\AbstractToken;
 
@@ -18,7 +18,7 @@ class HmacToken extends AbstractToken
     protected $request;
 
     /**
-     * @var \Acquia\Hmac\KeyInterface
+     * @var \NickVeenhof\Hmac\KeyInterface
      *   The authenticated credentials.
      */
     protected $key;
@@ -28,7 +28,7 @@ class HmacToken extends AbstractToken
      *
      * @param \Symfony\Component\HttpFoundation\Request $request
      *   The authenticated request.
-     * @param \Acquia\Hmac\KeyInterface $key
+     * @param \NickVeenhof\Hmac\KeyInterface $key
      *   An optional set of authenticated credentials.
      * @param \Symfony\Component\Security\Core\Role\RoleInterface[]|string[] $roles
      *   An array of roles.

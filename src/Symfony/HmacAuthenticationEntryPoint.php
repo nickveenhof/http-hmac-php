@@ -1,6 +1,6 @@
 <?php
 
-namespace Acquia\Hmac\Symfony;
+namespace NickVeenhof\Hmac\Symfony;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

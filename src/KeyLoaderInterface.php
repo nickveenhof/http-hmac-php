@@ -1,13 +1,13 @@
 <?php
 
-namespace Acquia\Hmac;
+namespace NickVeenhof\Hmac;
 
 interface KeyLoaderInterface
 {
     /**
      * @param string $id
      *
-     * @return \Acquia\Hmac\KeyInterface|false
+     * @return \NickVeenhof\Hmac\KeyInterface|false
      */
     public function load($id);
 }

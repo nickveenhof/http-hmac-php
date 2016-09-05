@@ -1,12 +1,12 @@
 <?php
 
-namespace Acquia\Hmac\Test;
+namespace NickVeenhof\Hmac\Test;
 
-use Acquia\Hmac\AuthorizationHeaderBuilder;
-use Acquia\Hmac\Digest\Digest;
-use Acquia\Hmac\Key;
-use Acquia\Hmac\RequestSigner;
-use Acquia\Hmac\Test\Mocks\MockRequestSigner;
+use NickVeenhof\Hmac\AuthorizationHeaderBuilder;
+use NickVeenhof\Hmac\Digest\Digest;
+use NickVeenhof\Hmac\Key;
+use NickVeenhof\Hmac\RequestSigner;
+use NickVeenhof\Hmac\Test\Mocks\MockRequestSigner;
 use GuzzleHttp\Psr7\Request;
 
 /**
@@ -15,7 +15,7 @@ use GuzzleHttp\Psr7\Request;
 class RequestSignerTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var \Acquia\Hmac\KeyInterface
+     * @var \NickVeenhof\Hmac\KeyInterface
      *   A sample key.
      */
     protected $authKey;

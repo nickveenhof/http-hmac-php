@@ -1,9 +1,9 @@
 <?php
 
-namespace Acquia\Hmac\Test;
+namespace NickVeenhof\Hmac\Test;
 
-use Acquia\Hmac\RequestSigner;
-use Acquia\Hmac\Digest\Digest;
+use NickVeenhof\Hmac\RequestSigner;
+use NickVeenhof\Hmac\Digest\Digest;
 
 /**
  * Tests the HTTP HMAC digest

@@ -1,8 +1,8 @@
 <?php
 
-namespace Acquia\Hmac\Test\Symfony;
+namespace NickVeenhof\Hmac\Test\Symfony;
 
-use Acquia\Hmac\Symfony\HmacAuthenticationEntryPoint;
+use NickVeenhof\Hmac\Symfony\HmacAuthenticationEntryPoint;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 

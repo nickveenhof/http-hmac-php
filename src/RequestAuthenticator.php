@@ -1,17 +1,17 @@
 <?php
 
-namespace Acquia\Hmac;
+namespace NickVeenhof\Hmac;
 
-use Acquia\Hmac\Exception\InvalidSignatureException;
-use Acquia\Hmac\Exception\KeyNotFoundException;
-use Acquia\Hmac\Exception\MalformedRequestException;
-use Acquia\Hmac\Exception\TimestampOutOfRangeException;
+use NickVeenhof\Hmac\Exception\InvalidSignatureException;
+use NickVeenhof\Hmac\Exception\KeyNotFoundException;
+use NickVeenhof\Hmac\Exception\MalformedRequestException;
+use NickVeenhof\Hmac\Exception\TimestampOutOfRangeException;
 use Psr\Http\Message\RequestInterface;
 
 class RequestAuthenticator implements RequestAuthenticatorInterface
 {
     /**
-     * @var \Acquia\Hmac\KeyLoaderInterface
+     * @var \NickVeenhof\Hmac\KeyLoaderInterface
      *   The key loader.
      */
     protected $keyLoader;
@@ -23,7 +23,7 @@ class RequestAuthenticator implements RequestAuthenticatorInterface
     protected $expiry;
 
     /**
-     * @param \Acquia\Hmac\KeyLoaderInterface $keyLoader
+     * @param \NickVeenhof\Hmac\KeyLoaderInterface $keyLoader
      *   A datastore used to locate secrets for corresponding IDs.
      */
     public function __construct(KeyLoaderInterface $keyLoader)

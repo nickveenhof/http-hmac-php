@@ -1,8 +1,8 @@
 <?php
 
-namespace Acquia\Hmac\Symfony;
+namespace NickVeenhof\Hmac\Symfony;
 
-use Acquia\Hmac\ResponseSigner;
+use NickVeenhof\Hmac\ResponseSigner;
 use Symfony\Bridge\PsrHttpMessage\Factory\DiactorosFactory;
 use Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;

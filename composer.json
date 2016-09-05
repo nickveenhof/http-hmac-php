@@ -1,8 +1,8 @@
 {
-    "name": "acquia/http-hmac-php",
+    "name": "nickveenhof/http-hmac-php",
     "type": "library",
-    "description": "An implementation of the HTTP HMAC Spec in PHP that integrates with popular libraries such as Symfony and Guzzle.",
-    "homepage": "https://github.com/acquia/http-hmac-php",
+    "description": "An implementation of the HTTP HMAC Spec in PHP that integrates with popular libraries such as Symfony and Guzzle. Different namespace to avoid version conflicts with content hub. Temporary!",
+    "homepage": "https://github.com/nickveenhof/http-hmac-php",
     "license": "MIT",
     "authors": [
         {
@@ -44,12 +44,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Acquia\\Hmac\\": "src/"
+            "NickVeenhof\\Hmac\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Acquia\\Hmac\\Test\\": "test/"
+            "NickVeenhof\\Hmac\\Test\\": "test/"
         }
     }
 }

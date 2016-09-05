@@ -1,10 +1,10 @@
 <?php
 
-namespace Acquia\Hmac;
+namespace NickVeenhof\Hmac;
 
-use Acquia\Hmac\Digest\DigestInterface;
-use Acquia\Hmac\Digest\Digest;
-use Acquia\Hmac\Exception\MalformedRequestException;
+use NickVeenhof\Hmac\Digest\DigestInterface;
+use NickVeenhof\Hmac\Digest\Digest;
+use NickVeenhof\Hmac\Exception\MalformedRequestException;
 use Psr\Http\Message\RequestInterface;
 
 /**
@@ -19,13 +19,13 @@ class AuthorizationHeaderBuilder
     protected $request;
 
     /**
-     * @var \Acquia\Hmac\KeyInterface
+     * @var \NickVeenhof\Hmac\KeyInterface
      *   The key with which to sign the authorization header.
      */
     protected $key;
 
     /**
-     * @var \Acquia\Hmac\Digest\DigestInterface
+     * @var \NickVeenhof\Hmac\Digest\DigestInterface
      *  The message digest used to generate the header signature.
      */
     protected $digest;
@@ -71,11 +71,11 @@ class AuthorizationHeaderBuilder
      *
      * @param \Psr\Http\Message\RequestInterface $request
      *   The request for which to generate the authorization header.
-     * @param \Acquia\Hmac\KeyInterface $key
+     * @param \NickVeenhof\Hmac\KeyInterface $key
      *   The key with which to sign the authorization header.
-     * @param \Acquia\Hmac\Digest\DigestInterface $digest
+     * @param \NickVeenhof\Hmac\Digest\DigestInterface $digest
      *   The message digest to use when signing requests. Defaults to
-     *   \Acquia\Hmac\Digest\Digest.
+     *   \NickVeenhof\Hmac\Digest\Digest.
      */
     public function __construct(RequestInterface $request, KeyInterface $key, DigestInterface $digest = null)
     {
@@ -170,10 +170,10 @@ class AuthorizationHeaderBuilder
     /**
      * Builds the authorization header.
      *
-     * @throws \Acquia\Hmac\Exception\MalformedRequestException
+     * @throws \NickVeenhof\Hmac\Exception\MalformedRequestException
      *   When a required field (ID, nonce, realm, version) is empty or missing.
      *
-     * @return \Acquia\Hmac\AuthorizationHeader
+     * @return \NickVeenhof\Hmac\AuthorizationHeader
      *   The compiled authorization header.
      */
     public function getAuthorizationHeader()
@@ -233,7 +233,7 @@ class AuthorizationHeaderBuilder
     /**
      * Generate a signature from the request.
      *
-     * @throws \Acquia\Hmac\Exception\MalformedRequestException
+     * @throws \NickVeenhof\Hmac\Exception\MalformedRequestException
      *   When a required header is missing.
      *
      * @return string

@@ -1,8 +1,8 @@
 <?php
 
-namespace Acquia\Hmac\Test;
+namespace NickVeenhof\Hmac\Test;
 
-use Acquia\Hmac\Key;
+use NickVeenhof\Hmac\Key;
 
 /**
  * Tests the key for authenticating and signing requests.
